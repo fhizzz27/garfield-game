@@ -1,0 +1,61 @@
+.task-container {
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.task-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: 2px solid #222;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+}
+
+.task-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-points {
+  font-size: 15px;
+  color: #222;
+}
+
+.gem-image {
+  width: 25px; /* Sesuaikan ukuran ini jika perlu */
+  height: 25px; /* Sesuaikan ukuran ini jika perlu */
+  margin-left: 5px;
+  vertical-align: middle;
+  margin-bottom: 5px;
+}
+
+.task-button {
+  background-color: blue;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+.task-button:hover {
+  background-color: #45a049;
+}
+
+.task-button-done {
+  background-color: #808080; /* Warna abu-abu untuk tombol "Done" */
+  cursor: not-allowed; /* Mengubah cursor menjadi tidak bisa diklik */
+}

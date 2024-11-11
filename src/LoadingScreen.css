@@ -1,0 +1,12 @@
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #ffa500; /* Warna latar belakang */
+}
+
+.loading-screen h2 {
+  margin-bottom: 20px;
+}

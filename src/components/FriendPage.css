@@ -1,0 +1,22 @@
+.container-friend {
+  width: 300px;
+  margin-left: 60px;
+  padding: 25px;
+  margin-top: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-friend h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.container-friend p {
+  font-size: 0.7em;
+  font-style: italic;
+  text-decoration: underline;
+}

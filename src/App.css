@@ -1,38 +1,253 @@
-.App {
-  text-align: center;
+/* Gaya default (untuk layar besar) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body {
+  height: 100%; /* Membuat body dan html memanfaatkan seluruh tinggi layar */
+  overflow: hidden; /* Menghindari scroll */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+  background-color: #ffa500;
+  height: 100vh; /* Membatasi tinggi aplikasi menjadi 100% dari tinggi viewport */
+  width: 100vw; /* Membatasi lebar aplikasi menjadi 100% dari lebar viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden; /* Menyembunyikan scroll jika konten melampaui */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  display: flex;
+  gap: 15px;
+  background-color: #333;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.image-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 100px;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.btn_wallet {
+  background-color: blue;
   color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.7s ease;
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-wallet:hover {
+  background-color: #333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn-wallet:focus {
+  outline: none;
+}
+
+.wrapper {
+  width: 210px;
+  height: 210px;
+}
+
+.centered-image {
+  width: 210px;
+  height: 210px;
+}
+
+.Point {
+  width: 100%;
+  text-align: center;
+}
+
+.Point h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.paragraf {
+  font-size: 2em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+}
+
+.comunitas-box {
+  position: relative;
+  height: 50px;
+  width: 500px;
+  margin-top: auto; /* Menempatkan box di dekat bagian bawah */
+  border-radius: 25px;
+  border: 5px solid gray;
+  background-color: blue;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+}
+.comunitas-box:hover {
+  background-color: #333;
+  cursor: pointer;
+}
+
+.comunitas-box p {
+  margin: 0;
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  font-style: oblique;
+}
+
+/* Media Queries untuk Responsif */
+
+/* Untuk layar lebih kecil, seperti 376px (handphone kecil) */
+@media (max-width: 376px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  .image-container {
+    gap: 10px;
+  }
+
+  .btn-wallet {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .wrapper,
+  .centered-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .comunitas-box {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .Point h1 {
+    font-size: 2em;
+  }
+
+  .paragraf {
+    font-size: 1.5em;
+  }
+}
+
+/* Untuk layar dengan lebar 576px (handphone ukuran menengah) */
+@media (max-width: 576px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .nav-link {
+    font-size: 16px;
+  }
+
+  .image-container {
+    gap: 15px;
+  }
+
+  .btn-wallet {
+    font-size: 15px;
+    padding: 11px 22px;
+  }
+
+  .wrapper,
+  .centered-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .comunitas-box {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .Point h1 {
+    font-size: 2.5em;
+  }
+
+  .paragraf {
+    font-size: 1.8em;
+  }
+}
+
+/* Untuk layar dengan ukuran lebih besar, seperti 6-inch phone (lebih besar dari 576px) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav-link {
+    font-size: 18px;
+  }
+
+  .image-container {
+    gap: 20px;
+  }
+
+  .btn-wallet {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+
+  .wrapper,
+  .centered-image {
+    width: 210px;
+    height: 210px;
+  }
+
+  .comunitas-box {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .Point h1 {
+    font-size: 3em;
+  }
+
+  .paragraf {
+    font-size: 2em;
   }
 }

@@ -1,0 +1,41 @@
+.btn-check-in {
+  background-color: #ff9500; /* Warna oranye cerah */
+  color: black;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-check-in:hover {
+  background-color: #e08900;
+  transform: scale(1.05);
+}
+
+/* Efek berkilau */
+.btn-check-in::before {
+  content: "Claim Points";
+  position: absolute;
+  top: 0;
+  left: -75px;
+  width: 50px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  transform: skewX(-20deg);
+  transition: left 1s ease-in-out;
+}
+
+.btn-check-in:hover::before {
+  left: 150%;
+}
+
+.btn-check-in:disabled {
+  background-color: #ff9500;
+  cursor: not-allowed;
+  transform: none;
+}

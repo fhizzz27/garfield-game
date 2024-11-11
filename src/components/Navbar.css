@@ -1,0 +1,28 @@
+.navbar-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff; /* Warna teks putih */
+  font-size: 14px; /* Ukuran font untuk teks */
+}
+
+.navbar-brand i {
+  font-size: 24px; /* Ukuran ikon */
+  margin-bottom: 4px; /* Spasi antara ikon dan teks */
+}
+
+.navbar-brand p {
+  margin: 0;
+  font-weight: 500; /* Tebal teks */
+  text-decoration: underline;
+}
+
+.navbar-brand:hover {
+  color: #d3d3d3; /* Warna teks saat hover */
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between; /* Spasi di antara elemen */
+}
